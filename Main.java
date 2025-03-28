@@ -10,7 +10,7 @@ public class Main {
     public static final String PURPLE = "\u001B[35m";
     public static final String CYAN = "\u001B[36m";
 
-    public static final int volumenDatos = 10000;//-------AQUI PUEDES CAMBIAR EL TAMAÑO DEL ARRAY 
+    public static final int volumenDatos = 10000;// -------AQUI PUEDES CAMBIAR EL TAMAÑO DEL ARRAY
 
     public static int[] arrRandom = GenerarArray(volumenDatos);
 
@@ -53,6 +53,26 @@ public class Main {
             arregloRandom[i] = random.nextInt(1001) - 100;
         }
         return arregloRandom;
+    }
+
+    public static int[] GenerarArrayOrdenado(int cantidadElementos) {
+
+        int[] arregloOrdenado = new int[cantidadElementos];
+
+        for (int i = 0; i < arregloOrdenado.length; i++) {
+            arregloOrdenado[i] = i;
+        }
+        return arregloOrdenado;
+    }
+
+    public static int[] GenerarArrayInverso(int cantidadElementos) {
+
+        int[] arregloInverso = new int[cantidadElementos];
+
+        for (int i = 0; i < arregloInverso.length; i++) {
+            arregloInverso[i] = (arregloInverso.length) - i;
+        }
+        return arregloInverso;
     }
 
     // Clonar arreglos
